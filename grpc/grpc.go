@@ -18,7 +18,6 @@ func RegisterGRPC(port int) (*grpc.Server, error) {
 	s := grpc.NewServer()
 	//反射接口支持查询
 	reflection.Register(s)
-
 	log.Printf("server listening at %v", lis.Addr())
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
