@@ -2,7 +2,10 @@ module github.com/15733012783/grpc
 
 go 1.20
 
-require google.golang.org/grpc v1.62.0
+require (
+	google.golang.org/grpc v1.62.0
+	google.golang.org/grpc/examples v0.0.0-20240227185121-eb08be40dba2
+)
 
 require (
 	github.com/golang/protobuf v1.5.3 // indirect
