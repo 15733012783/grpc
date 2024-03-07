@@ -10,7 +10,7 @@ import (
 )
 
 func RegisterGRPC(port int, c func(s *grpc.Server)) {
-	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", port))
+	lis, err := net.Listen("tcp", fmt.Sprintf("0.0.0.0:%d", port))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
